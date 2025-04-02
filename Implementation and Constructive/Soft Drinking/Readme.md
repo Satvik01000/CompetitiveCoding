@@ -1,5 +1,5 @@
 # Soft Drinking
-[Soft Drinking] (https://codeforces.com/problemset/problem/151/A)
+[Soft Drinking](https://codeforces.com/problemset/problem/151/A)
 
 ### Problem logic
 This is a very simple and straight-forward question, we will need to consider 
