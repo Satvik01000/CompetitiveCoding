@@ -1,5 +1,5 @@
 # Beautiful Matrix Problem
-[text](https://codeforces.com/problemset/problem/263/A)
+[Beautiful Matrix Problem](https://codeforces.com/problemset/problem/263/A)
 
 ## Solution Logic
 1. **Identify the Position of `1`:**

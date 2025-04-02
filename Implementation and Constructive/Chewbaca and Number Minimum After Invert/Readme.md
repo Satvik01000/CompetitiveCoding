@@ -1,4 +1,4 @@
-[text](https://codeforces.com/contest/514/problem/A)
+[Chewbaca and Numbers](https://codeforces.com/contest/514/problem/A)
 
 The key to solving this problem is to first of all analyze the outputs.
 
