@@ -1,0 +1,7 @@
+# Arrival of the General
+
+(Arrival of the General)[https://codeforces.com/problemset/problem/144/A]
+
+### Problem logic
+First thing which is pretty obvious on reading this problem is that we have to find the `maxElem` and the `minElem`
+, now we don't need to print the final output array of soldiers arranged in proper height we just need to give the time it will take for the arrangement, so find the `minIndex` and the `maxIndex` `ans+=n-minIndex` and then `ans+=maxIndex` because we have to shift the minimum element to the rightmost position and the maximum element to the leftmost position, main part in this problem is to choose the leftmost maxElem (i.e. if there are duplicate elements choose the leftmost max) and choose the rightmost `minElem` (same reasson why) this is because we need to do this arrangement in minimum possible time, if we see the code we don't need to care for maxElem because any ways we are doing a leftward pass but in the code see that in case of `minElem` we are doing `heights[i]>=minElem` this because of that reasson only get the rightmost `minIndex` and other thing to take care is that if `maxIndex > minIndex` then `ans=ans-1;` because when `minElem` is shifted to rightmost position `maxElem` would shift towards left by one position.
