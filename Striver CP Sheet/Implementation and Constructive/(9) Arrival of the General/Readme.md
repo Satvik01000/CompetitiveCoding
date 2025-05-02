@@ -1,6 +1,6 @@
 # Arrival of the General
 
-(Arrival of the General)[https://codeforces.com/problemset/problem/144/A]
+[Arrival of the General](https://codeforces.com/problemset/problem/144/A)
 
 ### Problem logic
 First thing which is pretty obvious on reading this problem is that we have to find the `maxElem` and the `minElem`
