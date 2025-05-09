@@ -1,3 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    vector<int> result(n);
+    for (int giver = 1; giver <= n; ++giver) {
+        int receiver;
+        cin >> receiver;
+        result[receiver - 1] = giver;
+    }
+    for (int x : result) cout << x << " ";
+    cout << "\n";
+    return 0;
+}
+
+/*
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -19,3 +37,4 @@ int main(){
     cout<<endl;
     return 0;
 }
+*/
