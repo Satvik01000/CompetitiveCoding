@@ -1,0 +1,5 @@
+# Erasing Zeroes
+[Erasing Zeroes](https://codeforces.com/problemset/problem/1303/A)
+
+### Problem Logic
+In this problem from question it is pretty clear what to do find number of 0's between any two 1's and erase them, tell how many will have to be erased. So what we will do is first of all traverse to the first occurence of a `1`, then when we reach a `1`, we will now have 2 variables `ans and zeroCount` for all the zero's do `zeroCount++` then when we encounter a `1`, do `ans+=zeroCount and zeroCount=0;`, we may think why do that just use `zeroCount` there is no need for a 2nd variable ans, but there is in cases like `1111000`, there are 3 zero's at the end and they are not enclosed by any `1`, so if we just maintain a `zeroCount` and no `ans` variable that will lead to an answer of 3 which is incorrect because answer in this case will be `0`.
