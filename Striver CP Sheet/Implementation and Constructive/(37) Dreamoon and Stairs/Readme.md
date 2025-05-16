@@ -1,0 +1,5 @@
+# Dreamoon and Stairs
+[Dreamoon and Stairs](https://codeforces.com/problemset/problem/476/A)
+
+### Problem Logic
+We will solve this problem in two parts first part we will calculate the minimum number of moves, in the second part we will calculate the minimum number of moves so that they are divisible by `m`, pretty obviously the mininmum number of moves will be when maximum `2` steps are taken, for example if `n=10`, then `minSteps=10/2=5` and if `n=9`, then `minSteps=2+2+2+2+1`. still 5 steps, i.e. minSteps will always be ceil(n/2); or in integer way `(n+1)/2`, now we need to calculate minimum possible steps such that it is divisble by m, so for that we will do `int moves = ceil((double)minMoves / m) * m;`, now `cout<<(moves > n ? -1 : moves)<<endl;`
