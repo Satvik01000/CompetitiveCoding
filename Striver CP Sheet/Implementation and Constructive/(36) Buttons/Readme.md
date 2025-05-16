@@ -13,7 +13,8 @@ So that is total 7 key presses, in the first and second we pressed wrong `totalP
 <img width="182" alt="image" src="https://github.com/user-attachments/assets/008739ab-94b4-46e7-95e8-6cc30d98c628" />
 
 
-As can be seen in the commented part of the code, we can use a for loop to do this and solve the problem. This will result in O(N) TC, but if we use Math and solve this `Σ`, then we can get the formula `(n*(n*n + 5))/6`, using which the TC will be O(1). 
+As can be seen in the commented part of the code, we can use a for loop to do this and solve the problem. This will result in O(N) TC, but if we use Math and solve this `Σ`, then we can get the formula <img width="76" alt="image" src="https://github.com/user-attachments/assets/50afd429-3797-4d41-b92d-1abcdadd771b" />
+, using which the TC will be O(1). 
 
 For how to open that split 
 
