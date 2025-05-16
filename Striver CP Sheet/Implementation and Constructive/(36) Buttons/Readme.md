@@ -2,9 +2,10 @@
 [Buttons](https://codeforces.com/problemset/problem/268/B)
 
 ### Problem Logic
-This is a difficult problem and is based on math pattern recognition, but before all that first thing is to understand the inputs and outputs, for example let's take input is equal to 3, from that as said in the problem we are getting an output of 7, now how are we getting 7 is the part to understand (W represents wrong and R represents right), we have 3 positions :-
+This is a difficult problem and is based on math pattern recognition, but before all that first thing is to understand the inputs and outputs, for example let's take input is equal to 3, from that as said in the problem we are getting an output of 7, now how are we getting 7 is the part to understand (W represents wrong and R represents right), we have 3 positions:-
 
 `_ _ _`
+
 W
 W
 R W
