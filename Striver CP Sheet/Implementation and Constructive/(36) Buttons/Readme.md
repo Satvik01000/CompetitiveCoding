@@ -6,10 +6,7 @@ This is a difficult problem and is based on math pattern recognition, but before
 
 `_ _ _`
 
-W
-W
-R W
-R R R
+<img width="69" alt="image" src="https://github.com/user-attachments/assets/54113d33-33b4-4392-bf2a-93ddc4843d47" />
 
 So that is total 7 key presses, in the first and second we pressed wrong `totalPresses=2`, then we pressed the right key then once again wrong key so `totalPresses=4`, then we pressed all the right keys, so `totalPresses=7`, from this we can observe one thing which is the base of this problem the result will be `1*(n-1)+1 + 2*(n-2)+1 + ------ + n*(n-n)+1`, i.e. if input is 3 then uptil 3-1=2 times we will get only one key press because in the worst case for finding the right key at first position requires `n-1` presses, then remaining keys are `n-1` and in the worst case to find the right key at this position will require `n-2` operations and each operation will contain `2` key presses hence `2*(n-2)+1` and so on till `n*(n-n)+1`, this gives out the formula to be 
 
