@@ -1,24 +1,22 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+ 
 void abcFinder(vector<int>& nums){
-    if(nums[1]!=nums[2]){
-        cout<<"NO"<<endl;
-        return;
+    sort(nums.begin(), nums.end());
+    if(nums[1] != nums[2]){
+        cout << "NO" << endl;
+    } else {
+        cout << "YES" << endl;
+        cout << nums[0] << " " << nums[2] << " " << nums[0] << endl;
     }
-    cout<<"YES"<<endl;
-    cout<<nums[0]<<" "<<nums[1]<<" "<<nums[2]<<endl;
 }
-
+ 
 int main(){
     int t;
-    cin>>t;
-
+    cin >> t;
     while(t--){
         vector<int> nums(3);
-        for(int& i : nums)
-            cin>>i;
-        sort(nums.begin(), nums.end());
+        for(int& i : nums) cin >> i;
         abcFinder(nums);
     }
     return 0;
