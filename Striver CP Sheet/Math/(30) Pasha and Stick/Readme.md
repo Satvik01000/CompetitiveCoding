@@ -16,7 +16,7 @@ in simpler words `1,1,2,2` will be equal to `2,2,1,1` so that is a repetation.
 
 So to sum up we need to find 2 numbers `a` and `b` which sum to `n/2`.
 
-![image](https://github.com/user-attachments/assets/e41d95db-0081-4bde-9361-d69915e12366)
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/e41d95db-0081-4bde-9361-d69915e12366"/>
 
 
 As stated in the image we will go till one way before `n/2` as repetation starts from there, in case of a odd number i.e. `n/2` is odd then we will return `n/4` and in case of even `(n/4) - 1` this is because in case of even number `(n/4), (n/4)` will be equal but in case of odd that will not be the case, to better understand take an example and dry run.
