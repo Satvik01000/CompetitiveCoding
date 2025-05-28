@@ -1,0 +1,5 @@
+# String LCM
+[String LCM](https://codeforces.com/problemset/problem/1473/B)
+
+### Problem Logic
+To find the LCM of any two numbers we can apply this formula `(a*b)/gcd(a, b)`, for example `LCM(100, 50) = (100 * 50)/gcd(100, 50) = 5000/gcd(100, 50) = 5000/50 = 100`, this way LCM of any two numbers can be calculated. Now applying the same logic to strings, what we will do is first of all take the lengths of the two string and divide the lengths by the GCD of the two strings in order to get the simplest forms, now for the LCM of the string we weill multiply these divided string lengths see the code we multiply `l1` with `t` and `l2` with `s`, multiplication is done as is defined in the question, now check if the obtained strings are equal if so then return the obtained string, else return `-1`.
