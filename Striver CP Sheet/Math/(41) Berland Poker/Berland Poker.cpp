@@ -6,7 +6,7 @@ int maxPoints(int n, int m, int k) {
     int maxJokers = min(m, cardsPerPlayer);
     int remainingJokers = m - maxJokers;
 
-    int maxJokersOtherPlayer = (remainingJokers + k - 2) / (k - 1); // ceil division
+    int maxJokersOtherPlayer = ceil((double)remainingJokers / (k - 1));
     return maxJokers - maxJokersOtherPlayer;
 }
 
