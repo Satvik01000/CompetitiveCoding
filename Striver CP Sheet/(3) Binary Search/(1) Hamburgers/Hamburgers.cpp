@@ -4,11 +4,11 @@ using namespace std;
 typedef long long ll;
 
 bool canMake(ll x, ll nb, ll ns, ll nc, ll pb, ll ps, ll pc, ll needB, ll needS, ll needC, ll r) {
-    ll totalB = max(0LL, x * needB - nb);
-    ll totalS = max(0LL, x * needS - ns);
-    ll totalC = max(0LL, x * needC - nc);
+    ll totalRemainingNeededB = max(0LL, x * needB - nb);
+    ll totalRemainingNeededS = max(0LL, x * needS - ns);
+    ll totalRemainingNeededC = max(0LL, x * needC - nc);
 
-    ll cost = totalB * pb + totalS * ps + totalC * pc;
+    ll cost = totalRemainingNeededB * pb + totalRemainingNeededS * ps + totalRemainingNeededC * pc;
     return cost <= r;
 }
 
