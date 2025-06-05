@@ -1,48 +1,43 @@
+ 
 #include <bits/stdc++.h>
+ 
 using namespace std;
-
-long long countValidPositions(vector<int>& a, long long x, int n, int k) {
-    vector<long long> prefix(2 * n + 1, 0);
-    
-    for (int i = 1; i <= n; i++)
-        prefix[i] = prefix[i - 1] + a[i - 1];
-
-    long long totalSum = prefix[n];
-    long long result = 0;
-
-    for (int start = 0; start < n; start++) {
-        long long sum = 0;
-        for (int copies = 0; copies < k; copies++) {
-            sum += totalSum;
-            if (sum >= x) {
-                result += (n * k) - (start + copies * n);
-                break;
+ 
+using ll = long long;
+using ull = unsigned long long;
+using ld = long double;
+const int MOD = 1000000007;
+ 
+#define fast ios::sync_with_stdio(false); cin.tie(nullptr)
+#define tests int testCount; cin >> testCount; while(testCount--)
+ 
+int main() {
+    fast;
+    tests {
+        ll n, k, x;
+        cin >> n >> k >> x;
+        vector<ll> a(n);
+        for (int i = 0; i < n; i++) {
+            cin >> a[i];
+        }
+        ll sum = 0;
+        for (const auto i : a) {
+            sum += i;
+        }
+ 
+        ll res = 0;
+        for (int i = n-1; i >= 0; --i) {
+            x -= a[i];
+            ll full_lengths = 0;
+            if (x > 0) {
+                full_lengths = (x % sum == 0) ? x/sum : 1 + x/sum;
             }
-            for (int end = start + 1; end < n; end++) {
-                sum += a[end];
-                if (sum >= x) {
-                    result += (n * k) - (end + copies * n);
-                    break;
-                }
+            // cerr << "a[i] and full lengths: " << a[i] << " " << full_lengths << endl;
+            if (full_lengths + 1 <= k) {
+                res += (k - full_lengths);
             }
         }
+        cout << res << endl;
     }
-
-    return result;
-}
-
-int main() {
-    int t;
-    cin >> t;
-    while (t--) {
-        int n, k;
-        long long x;
-        cin >> n >> k >> x;
-        vector<int> a(n);
-        for (int i = 0; i < n; i++)
-            cin >> a[i];
-
-        cout << countValidPositions(a, x, n, k) << endl;
-    }
-    return 0;
+ 
 }
