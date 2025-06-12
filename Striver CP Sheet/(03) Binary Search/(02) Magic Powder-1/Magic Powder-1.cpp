@@ -29,9 +29,8 @@ int main() {
         if (canMake(mid, need, have, n, k)) {
             ans = mid;
             low = mid + 1;
-        } else {
+        } else
             high = mid - 1;
-        }
     }
     cout << ans << endl;
     return 0;

@@ -1,35 +1,31 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
-#define ll long long
-
-const int mod = 1e9 + 7;
+ 
+typedef long long ll;
+ 
+bool canBuild(ll n, ll k, ll s) {
+    if (s > k - 1) return false;
+    ll first = k - 1;
+    ll last = k - s;
+    ll totalPipes = s * (first + last) / 2;
+    return totalPipes >= n - 1;
+}
+ 
 int main() {
     ll n, k;
     cin >> n >> k;
-    
     if (n == 1) {
         cout << 0 << endl;
         return 0;
     }
-    
-    if (n <= k) {
-        cout << 1 << endl;
-        return 0;
-    }
-    
-    ll low = 2, high = k, ans = -1;
-    ll out = k * (k + 1) / 2;
-    out -= k;
-    
+    ll low = 1, high = min(n - 1, k - 1), ans = -1;
     while (low <= high) {
         ll mid = low + (high - low) / 2;
-        ll temp = out - ((mid * (mid - 1) / 2) - mid);
-        
-        if (temp >= n) {
-            ans = k - (mid - 1);
-            low = mid + 1;
-        } else
+        if (canBuild(n, k, mid)) {
+            ans = mid;
             high = mid - 1;
+        } else
+            low = mid + 1;
     }
     cout << ans << endl;
     return 0;
