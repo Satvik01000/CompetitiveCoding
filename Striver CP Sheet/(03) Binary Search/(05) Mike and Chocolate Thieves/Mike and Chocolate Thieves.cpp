@@ -1,20 +1,21 @@
 # include <bits/stdc++.h>
 using namespace std;
+# define ll long long
 
-long long get(long long n){
-    long long ans = 0;
-    for (long long i = 2; i * i * i <= n;++i)
+ll get(ll n){
+    ll ans = 0;
+    for (ll i = 2; i * i * i <= n;++i)
         ans += n / (1LL*i * i * i);
     return ans;
 }
 
 int main(){
-    long long m,n=-1;
+    ll m,n=-1;
     cin>>m;
     
-    long long low=0,high=5e15;
+    ll low=0,high=5e15;
     while (low<high){
-        long long mid = (low+high)/2;
+        ll mid = (low+high)/2;
         if (get(mid)<m) 
             low=mid+1;
         else
