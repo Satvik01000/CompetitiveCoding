@@ -7,7 +7,8 @@ That is because of the digit `7`:
 `9 - 7 = 2` was placed, but we see `2` was not subtracted from `9`,  
 as `9 - 2` would result in `7`, which would make the number larger, which is not what we need.
 
-So we see one thing from here:  
+So we see one thing from here:
+```
 9-1=8
 9-2=7
 9-3=6
@@ -17,7 +18,7 @@ So we see one thing from here:
 9-7=2
 9-8=1
 9-9=0
-
+```
 We can clearly see that any number before `5` if subtracted from `9` will result in a number greater than `9`,  
 so we will only invert the digits that are greater than or equal to `5`.  
 
