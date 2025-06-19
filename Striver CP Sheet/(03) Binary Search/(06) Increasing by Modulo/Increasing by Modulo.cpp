@@ -4,7 +4,7 @@ using namespace std;
 bool check(const vector<int>& nums, int val, int n, int m) {
     vector<int> b = nums;
 
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1 ; i <= n; i++) {
         int need = (b[i - 1] - b[i] + m) % m;
         if (need <= val)
             b[i] = b[i - 1];
