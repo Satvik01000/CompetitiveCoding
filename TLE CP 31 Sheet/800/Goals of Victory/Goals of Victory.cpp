@@ -2,7 +2,6 @@
 using namespace std;
 #define fast ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
 #define ll long long
-
 int missingEfficiency(vector<int>& efficiency, int n){
     int totalEfficiency=0;
     for(int& i : efficiency) totalEfficiency+=i;
