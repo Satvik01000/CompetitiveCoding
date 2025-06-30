@@ -1,0 +1,5 @@
+### Odd Queries
+[Odd Queries](https://codeforces.com/problemset/problem/1807/D)
+
+### Problem Logic
+From the constraints we need to solve the problem in order of linear time, if we compute totalSum or sum in the given range again and again for every query we cannot achieve linear time complexity, so what we will do is use a `totalSum` and `prefixArray`. Using this we will need to compute the different sums only once per test case and the TC would boil down to `O(n+q)`. What we will do is while taking the input itself we will compute `totalSum` and `prefixArray`. Now going to every query we will calculte the `rangeSum = prefixSum[r] - (l>0 ? prefixSum[l-1] : 0)`, then the as `remainingSum=sum - rangeSum` the sum of the remainingElements outside `[l, r]`. Now if `k` is odd and the `size` is odd then the `remainingSum` should be even to get a odd result. In other case if `remainingSum` is odd then either `k` or `size` should be even which will result to an even sum, and and overall odd sum.

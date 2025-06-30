@@ -1,0 +1,6 @@
+### Longest Divisors Interval
+[Longest Divisors Interval](https://codeforces.com/problemset/problem/1855/B)
+
+### Problem Logic
+[Watch this video](https://www.youtube.com/watch?v=bSiSrZO8nV0&t=57s)
+Basically in this we are reverse engineering, if we have a valid segment `[l, r]` in which all the elements in the segment divide `n`, then we will for sure have a segment `[1, r-l+1]` of the same length as `[l, r]` dividing `n` because all the elements in `[1, r-l+1]`, will have atleast one multiple in `[l, r]`, for example `4` divides `40` and `2` divides `4` so `2` also divides `40`, now because finding `[l, r]` is very difficult we will start from `1` and go till the last number which divides `n` and that would be our answer. According to the constraints the problem had to be solved in O(1) or O(logN), this solution will satisfy that because at max the while loop will run till `i=50 or 60`, which is very less number of operations, beyond that the results may go beyond 10^18, which is the constraint for `n`.
