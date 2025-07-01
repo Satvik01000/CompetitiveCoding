@@ -1,0 +1,5 @@
+### Array Cloning Technique
+[Array Cloning Technique](https://codeforces.com/problemset/problem/1665/B)
+
+### Problem Logic
+First of all what we will do is greedily pick the character with the largest frequency, this will ensure minimum number of operations. Now what we want to do is make this maxFreq==n, for that what we will do is in one cycle, clone the array that will lead to `operations+=1`, now what we will do is swap the `maxFreq` elem and place it in one array and all the other elements in other array. Now `operations+= (n-maxFreq > maxFreq ? maxFreq : n-maxFreq);`, i.e. if the remaining elements are greater than `maxFreq` then we do `maxFreq` number of swaps otherwise we do `n-maxFreq` number of swaps, when we need to do `n-maxFreq` number of swaps that would be the last operation because after that we will have an array with all the same numbers, before that case in every case the `maxFreq` will double so after performing these two things, i.e. cloning the array and performing swaps we will do `maxFreq+=maxFreq`.
