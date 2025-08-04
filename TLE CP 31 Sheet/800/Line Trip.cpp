@@ -7,8 +7,7 @@ bool isPossible(int cap, vector<int>& gasStations, int n, int x){
     int prev=0;
     for(int i=0; i<n; i++){
         int curr=gasStations[i];
-        if(cap<(curr-prev))
-            return false;
+        if(cap<(curr-prev)) return false;
         prev=curr;
     }
     if(cap<2*(x-prev)) return false;
