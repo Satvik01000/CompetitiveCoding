@@ -3,6 +3,21 @@ using namespace std;
 #define fast ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
 #define ll long long
 
+int resultOfGame(vector<vector<ll>>& arrays) {
+    int n = arrays.size();
+    ll minFirst = LLONG_MAX;
+    ll minSecond = LLONG_MAX;
+    ll sumSecond = 0;
+
+    for (int i = 0; i < n; i++) {
+        minFirst = min(minFirst, arrays[i][0]);
+        minSecond = min(minSecond, arrays[i][1]);
+        sumSecond += arrays[i][1];
+    }
+
+    return sumSecond - minSecond + minFirst;
+}
+
 int main() {
     fast;
     int t;
@@ -10,32 +25,15 @@ int main() {
     while (t--) {
         int n;
         cin >> n;
-        ll globalFirstMin = LLONG_MAX, globalSecondMin = LLONG_MAX;
-        ll sumSeconds = 0;
-
-        while (n--) {
+        vector<vector<ll>> arrays(n);
+        for (int i = 0; i < n; i++) {
             int mi;
             cin >> mi;
-            vector<ll> nums(mi);
-            ll firstMinTemp = LLONG_MAX, secondMinTemp = LLONG_MAX;
-            for (auto &i : nums) cin >> i;
-            for (auto &i : nums) {
-                if (i < firstMinTemp) {
-                    secondMinTemp = firstMinTemp;
-                    firstMinTemp = i;
-                } else if (i < secondMinTemp) {
-                    secondMinTemp = i;
-                }
-            }
-            if (secondMinTemp == LLONG_MAX) secondMinTemp = firstMinTemp;
-
-            globalFirstMin = min(globalFirstMin, firstMinTemp);
-            globalSecondMin = min(globalSecondMin, secondMinTemp);
-            sumSeconds += secondMinTemp;
+            arrays[i].resize(mi);
+            for (auto &x : arrays[i]) cin >> x;
+            sort(arrays[i].begin(), arrays[i].end());
         }
-
-        ll answer = sumSeconds - globalSecondMin + globalFirstMin;
-        cout << answer << "\n";
+        cout << resultOfGame(arrays) << endl;
     }
     return 0;
 }
