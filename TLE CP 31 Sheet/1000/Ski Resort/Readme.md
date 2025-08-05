@@ -1,0 +1,5 @@
+### Ski Resort
+[Ski Resort](https://codeforces.com/problemset/problem/1840/C)
+
+### Problem Logic
+What we basically do in this problem is that we maintain two variables `count` and `ans`, now what we do is we loop on the array and find the number of consecutive temperatures that are `≤q`, moment we encounter a temperature which is `>q` what we do is first check if the present `count≥k` because he will go for at least `k` days, if `count≥k` then we do `len = count - k + 1`, now how we came up with this for that [watch this video](https://youtu.be/w6D0SsZA_cQ). What he basically does in the problem is that we are having atleast `k` and atmost `count` days of vacations so we count the number of ways for a vacation of `k` days, then for `k+1`, and so on till a vacation of `count` days. What we can infer from that is a generalized pattern which for `count` days we have `1` way, for `count-1` days we have `2` ways, and so on for `k` days we have `count-k+1` ways, so this basically becomes sum of natural numbers from `1 to count-k+1`. Rest can be easily understood from the code.
