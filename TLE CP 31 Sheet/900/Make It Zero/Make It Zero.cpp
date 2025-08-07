@@ -4,7 +4,7 @@ using namespace std;
 #define ll long long
 
 void makeItZero(int n, vector<int>& nums){
-    if((n&1)==0){
+    if(!(n&1)){
         cout<<2<<endl;
         cout<<1<<" "<<n<<endl;
         cout<<1<<" "<<n<<endl;
