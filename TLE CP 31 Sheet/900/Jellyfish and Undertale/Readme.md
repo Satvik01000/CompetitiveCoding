@@ -2,4 +2,9 @@
 [Jellyfish and Undertale](https://codeforces.com/problemset/problem/1875/A)
 
 ### Problem Logic
-What we do to solve this problem is first of all sort the given tools array, then what we will do is wait `b-1` seconds, i.e. the time till `b` becomes `1` and every time it becomes `1` we use the tool of the highest denomination we have to increment the timer but keeping in mind the bug we do `b=min(1+increment[i], a)`, `1+increment[i]` because we are adding `increment[i]` to the remaining time and at the time we choose to add it the remaining time is always `1`, this ensures maximum utilization.
+To solve this problem, we first sort the given `tools` array. Then, we wait for `b - 1` seconds—i.e., until `b` becomes `1`. Every time `b` becomes `1`, we use the tool with the highest denomination available to increase the timer. 
+
+However, due to the bug described in the problem, we update `b` using the formula:  
+`b = min(1 + increment[i], a)`.  
+
+Here, `1 + increment[i]` accounts for the fact that we are adding `increment[i]` to the remaining time when it is exactly `1`. This ensures maximum utilization of each tool.

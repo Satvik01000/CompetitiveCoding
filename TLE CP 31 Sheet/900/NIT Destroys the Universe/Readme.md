@@ -1,0 +1,5 @@
+### NIT Destroys the Universe
+[NIT Destroys the Universe](https://codeforces.com/problemset/problem/1696/B)
+
+### Problem Logic
+What we do is check if apart from leading and trailing 0's there is any zero in between we will `return 2`, if there is no zero in between then we `return 1`, we `return 0` in case the whole array is 0. Why we do this, so in case when we `return 2`, what we do is say the array has `0's` in between then we can do 2 things, either we can make each non-zero segment equal to zero but that can take many operations, the other thing we can do is take the starting index and last index, now apply the `mex()` operation on whole array, we will get a result say `w`, now apply the `mex()` operation on the whole array again we will get the result as `0` for sure and hence we did the task in just 2 operations.

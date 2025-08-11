@@ -7,8 +7,8 @@ string possibleOrNot(vector<int>& nums, vector<ll>& prefixSum, ll sum, int n, in
     ll rangeSum = prefixSum[r] - (l>0 ? prefixSum[l-1] : 0);
     ll remainingSum = sum - rangeSum;
     int size = r - l + 1;
-    if(((k&1)==1) && ((size&1)==1) && ((remainingSum&1)!=1)) return "YES";
-    if((((k&1)!=1) || ((size&1)!=1)) && ((remainingSum&1)==1)) return "YES";
+    if ((k & 1) && (size & 1) && !(remainingSum & 1)) return "YES";
+    if ((!(k & 1) || !(size & 1)) && ((remainingSum & 1))) return "YES";
     return "NO";
 }
 

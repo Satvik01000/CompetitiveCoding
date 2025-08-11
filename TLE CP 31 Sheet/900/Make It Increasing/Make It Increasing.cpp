@@ -5,12 +5,14 @@ using namespace std;
 
 int minOperations(vector<int>& nums, int n){
     int operations=0;
-    for(int i=n-1; i>0; i--){
+    for(int i=n-1; i>0;){
         if(nums[i]==0) return -1;
-        while(nums[i]<=nums[i-1]){
+        if(nums[i]<=nums[i-1]){
             nums[i-1]/=2;
             operations++;
+            continue;
         }
+        i--;
     }
     return operations;
 }

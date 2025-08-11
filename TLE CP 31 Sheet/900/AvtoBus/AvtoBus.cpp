@@ -4,11 +4,10 @@ using namespace std;
 #define ll long long
 
 void minMaxBuses(ll n) {
-    if (n % 2 != 0 || n < 4) {
+    if (n % 2 != 0 || n < 4)
         cout << -1 << '\n';
-    } else {
+    else
         cout << n / 6 + (n % 6 > 0) << ' ' << n / 4 << '\n';
-    }
 }
 
 int main() {
