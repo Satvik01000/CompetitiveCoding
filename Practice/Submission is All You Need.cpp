@@ -9,15 +9,16 @@ int main() {
     cin >> t;
     while (t--) {
         int n;
-        cin >> n;
+        cin>>n;
         vector<int> nums(n);
-        ll zeroCount=0, oneCount=0;
-        for (auto& i : nums) {
-            cin >> i;
+        int zeroCount=0, ans=0;
+        for(auto& i : nums){
+            cin>>i;
             if(i==0) zeroCount++;
-            if(i==1) oneCount++;
+            ans+=i;
         }
-        cout<<(oneCount * (1LL<<zeroCount))<<endl;
+        ans+=zeroCount;
+        cout<<ans<<endl;
     }
     return 0;
 }
