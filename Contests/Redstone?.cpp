@@ -3,6 +3,12 @@ using namespace std;
 #define fast ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
 #define ll long long
 
+string possibleOrNot(vector<int>& nums, const int& n){
+    unordered_set<int> elems(nums.begin(), nums.end());
+    if(elems.size()==n) return "NO";
+    return "YES";
+}
+
 int main() {
     fast;
     int t;
@@ -11,14 +17,8 @@ int main() {
         int n;
         cin>>n;
         vector<int> nums(n);
-        int zeroCount=0, ans=0;
-        for(auto& i : nums){
-            cin>>i;
-            if(i==0) zeroCount++;
-            ans+=i;
-        }
-        ans+=zeroCount;
-        cout<<ans<<endl;
+        for(auto& i : nums) cin>>i;
+        cout<<possibleOrNot(nums, n)<<endl;
     }
     return 0;
 }
