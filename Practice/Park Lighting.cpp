@@ -5,10 +5,13 @@ using namespace std;
 
 int main() {
     fast;
-    int x, y;
-    cin>>x>>y;
-    int ans = (x+y)%12;
-    if(ans==0) ans=12;
-    cout<<ans<<endl;
+    int t;
+    cin >> t;
+    while (t--) {
+        ll n, m;
+        cin >> n >> m;
+        ll cells = n * 1LL * m;
+        cout << (cells + 1) / 2 << endl;
+    }
     return 0;
 }

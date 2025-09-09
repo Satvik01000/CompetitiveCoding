@@ -3,12 +3,14 @@ using namespace std;
 #define fast ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
 #define ll long long
 
+int minPossibleAddition(int x){
+    return __builtin_popcount(x);
+}
+
 int main() {
     fast;
-    int x, y;
-    cin>>x>>y;
-    int ans = (x+y)%12;
-    if(ans==0) ans=12;
-    cout<<ans<<endl;
+    int x;
+    cin>>x;
+    cout<<minPossibleAddition(x)<<endl;
     return 0;
 }
