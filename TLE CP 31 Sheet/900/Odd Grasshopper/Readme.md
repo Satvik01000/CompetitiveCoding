@@ -1,0 +1,7 @@
+### Odd Grasshopper
+[Odd Grasshopper](https://codeforces.com/problemset/problem/1607/B)
+
+### Problem Logic
+First of all see the expected TC of this which is O(logN) or O(1), so since that is the case we can say from experience that `Math` will be involved to solve this optimally. Now this is a completely Ad-Hoc problem statement, this is not a standard math formula you can apply here and get the results, what we need to do is dry run and observe how it works, for example if we just take `start_pos` = 0, we will see that after every `4` jumps the grasshopper lands once again at the `start_pos`, i.e. `start_pos`, i.e. the start_pos can be anything but after every `4` jumps the grasshopper will be back at the `start_pos`. Now we can for the sake of understanding once agaain take start_pos = 0, we will see that in the first jump `-1`, i.e. if there were `n` jumps and `if(n%4 == 1)`, then then grasshopper will land at `-n`. Similarly we can observe for other if else statements in the code.
+
+Now for the final answer what we solved this problem is using our `start_pos` as `0` but that will not be the case always, so what we will do is shift the origin, if the `start_pos` is odd then we will do `finalPos = x - finalPos;` and if it is even then we will do `finalPos = x + finalPos;`, this is because for even numbers they will behave like `0` and the odd numbers will behave opposite. Dry run for better understanding. 
