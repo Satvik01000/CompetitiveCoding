@@ -10,7 +10,7 @@ int main() {
     while (t--) {
         int x;
         cin>>x;
-        cout<<(2*x)<<endl;
+        cout<<(8*x)<<endl;
     }
     return 0;
 }
