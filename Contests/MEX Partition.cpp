@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define fast ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
+#define ll long long
+
+int minScore(vector<int>& nums, const int& n){
+    unordered_set<int> elems(nums.begin(), nums.end());
+    int i = 0;
+    while(true){
+        if(elems.find(i)==elems.end()) return i;
+        i++;
+    }
+}
+
+int main() {
+    fast;
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin>>n;
+        vector<int> nums(n);
+        for(auto& i : nums) cin>>i;
+        cout<<minScore(nums, n)<<endl;
+    }
+    return 0;
+}
