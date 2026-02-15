@@ -11,7 +11,7 @@ int main() {
     cin >> n >> k >> m;
 
     vector<ll> nums(n);
-    for(auto &x : nums) cin >> x;
+    for(auto &i : nums) cin >> i;
 
     vector<ll> pref(n+1, 0);
     for(int i = 0; i < n; i++) pref[i+1] = pref[i] + nums[i];
